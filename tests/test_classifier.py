@@ -39,7 +39,9 @@ def angles(**kw):
     ({"left_shoulder": 170, "right_shoulder": 170, "left_knee": 325}, TREE),
     ({"left_shoulder": 20, "right_shoulder": 20}, UNKNOWN),          # arms down
     ({"left_elbow": 120}, UNKNOWN),                                  # bent arm
-    ({"right_shoulder": 111.8, "right_knee": 105}, UNKNOWN),         # just outside the 80-110 band
+    ({"right_shoulder": 111.8, "right_knee": 105}, WARRIOR_II),      # leaning torso, measured on a real photo
+    ({"right_shoulder": 116, "right_knee": 105}, UNKNOWN),           # just outside the 75-115 band
+    ({"left_shoulder": 128, "right_shoulder": 123}, UNKNOWN),        # arms raised in a V
 ])
 def test_rules(kw, label):
     assert classify_angles(angles(**kw)) == label

@@ -44,7 +44,8 @@ def classify_angles(a: JointAngles) -> str:
     """Warrior II, T pose, tree pose or unknown, from joint angles."""
     label = UNKNOWN
     arms_straight = _between(a.left_elbow, 165, 195) and _between(a.right_elbow, 165, 195)
-    shoulders_90 = _between(a.left_shoulder, 80, 110) and _between(a.right_shoulder, 80, 110)
+    # 75-115 rather than 80-110: Warrior II leans the torso, opening the shoulder angle to ~112.
+    shoulders_90 = _between(a.left_shoulder, 75, 115) and _between(a.right_shoulder, 75, 115)
     one_leg_straight = _between(a.left_knee, 165, 195) or _between(a.right_knee, 165, 195)
 
     if arms_straight and shoulders_90:

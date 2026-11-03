@@ -69,8 +69,8 @@ Angles are in degrees, measured at the middle joint (see `asana_abhyas/angles.py
 
 | Pose | Elbows | Shoulders | Knees |
 |---|---|---|---|
-| Warrior II | both 165-195 | both 80-110 | one 165-195, other 90-120 |
-| T Pose | both 165-195 | both 80-110 | both 160-195 |
+| Warrior II | both 165-195 | both 75-115 | one 165-195, other 90-120 |
+| T Pose | both 165-195 | both 75-115 | both 160-195 |
 | Tree Pose | any | any | one 165-195, other 315-335 (left) or 25-45 (right) |
 
 Anything else is reported as `Unknown Pose`.
@@ -92,8 +92,8 @@ tests/                   pytest suite for angles and rules
 ## Limitations
 
 - The rules are hand-tuned thresholds, not a trained classifier. They only work well when the
-  person faces the camera directly, and they are strict: in a local check, a Warrior II photo
-  was missed because one shoulder measured 112 degrees, just outside the 80-110 band.
+  person faces the camera directly. The shoulder band is 75-115 degrees (wider than the
+  tutorial's 80-110) because a Warrior II photo with a slightly leaning torso measured 112.
 - Only one person per frame is analysed.
 - No sample images are shipped. Use your own photos.
 
