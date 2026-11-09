@@ -103,3 +103,7 @@ The notebook's approach and structure (angle heuristics for Warrior II, T Pose a
 top of MediaPipe Pose) follow Bleed AI's public tutorial on real-time pose detection and
 classification with MediaPipe. The original notebook used the now-removed `mp.solutions.pose` API.
 It has been ported to the MediaPipe Tasks API and refactored into a package.
+
+## Licence
+
+[MIT](LICENSE) © 2024–2026 Samarth Jaiswal
